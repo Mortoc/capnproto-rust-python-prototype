@@ -21,6 +21,8 @@ impl greeter::Server for GreeterImpl {
         let message = format!("Hello, {name}!");
         results.get().init_response().set_text(message);
 
+        println!("Received: {name}");
+
         Promise::ok(())
     }
 }
