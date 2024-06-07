@@ -19,7 +19,6 @@ fn main() {
     command.output_path(out_dir);
 
     let mod_file_path = Path::join(std::env::current_dir().unwrap().as_path(), "protos/mod.rs");
-    println!("mod: {:?}", mod_file_path);
     let mut prelude_file = File::create(mod_file_path).expect("create prelude.rs");
 
     for entry in WalkDir::new(proto_dir) {
