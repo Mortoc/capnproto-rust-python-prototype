@@ -31,7 +31,7 @@ impl greeter::Server for GreeterImpl {
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     tokio::task::LocalSet::new()
         .run_until(async move {
-            let addr = "0.0.0.0:50051";
+            let addr = "0.0.0.0:51051";
             let listener = tokio::net::TcpListener::bind(addr).await?;
             println!("Started server on: {addr}");
 

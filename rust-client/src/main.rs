@@ -10,7 +10,7 @@ pub mod greeter_capnp {
 pub async fn main() -> Result<(), Box<dyn std::error::Error>> {
     tokio::task::LocalSet::new()
         .run_until(async move {
-            let addr = "127.0.0.1:50051";
+            let addr = "127.0.0.1:51051";
             println!("Connecting to {}", addr);
             let stream = tokio::net::TcpStream::connect(&addr).await?;
             stream.set_nodelay(true)?;
